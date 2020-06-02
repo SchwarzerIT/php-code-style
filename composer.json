@@ -1,6 +1,6 @@
 {
   "name": "schwarzer/php-code-style",
-  "description": "SchwarzerIT's shared PHP style rules for PHP-CS-Fixer",
+  "description": "Schwarzer IT's shared PHP style rules for PHP-CS-Fixer",
   "license": "proprietary",
   "require": {
     "friendsofphp/php-cs-fixer": "^2.0"
