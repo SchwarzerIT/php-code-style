@@ -1,0 +1,13 @@
+{
+  "name": "schwarzer/php-code-style",
+  "description": "SchwarzerIT's shared PHP style rules for PHP-CS-Fixer",
+  "license": "proprietary",
+  "require": {
+    "friendsofphp/php-cs-fixer": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Schwarzer\\PhpCs\\": "src/"
+    }
+  }
+}
