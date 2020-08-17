@@ -95,7 +95,7 @@ return [
     'phpdoc_no_useless_inheritdoc' => true,
     'phpdoc_scalar' => true,
     'phpdoc_single_line_var_spacing' => true,
-    'phpdoc_summary' => true,
+    'phpdoc_summary' => false, // barryvdh/laravel-ide-helper model helper writes class name in first line
     'phpdoc_to_comment' => true,
     'phpdoc_trim' => true,
     'phpdoc_types' => true,
@@ -147,5 +147,6 @@ return [
     'mb_str_functions' => true, // utf-8 safe
     'is_null' => [ // added to get strict compare instead of is_null
         'use_yoda_style' => true,
-    ]
+    ],
+    'yoda_style' => true, // personal taste
 ];
