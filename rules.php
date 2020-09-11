@@ -150,4 +150,5 @@ return [
     ],
     'yoda_style' => true, // personal taste
     'no_unused_imports' => true, // personal taste
+    'array_indentation' => true, // personal taste
 ];
