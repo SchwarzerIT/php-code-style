@@ -149,4 +149,5 @@ return [
         'use_yoda_style' => true,
     ],
     'yoda_style' => true, // personal taste
+    'no_unused_imports' => true, // personal taste
 ];
