@@ -7,20 +7,20 @@
  */
 
 return [
-    'array_syntax' => ['syntax' => 'short',],
+    'array_syntax' => ['syntax' => 'short'],
     'binary_operator_spaces' => [
         'default' => 'single_space',
-        'operators' => ['=>' => null,],
+        'operators' => ['=>' => null],
     ],
     'blank_line_after_namespace' => true,
     'blank_line_after_opening_tag' => true,
     'blank_line_before_statement' => [
-        'statements' => ['return',],
+        'statements' => ['return'],
     ],
     'braces' => true,
     'cast_spaces' => true,
     'class_attributes_separation' => [
-        'elements' => ['const', 'method', 'property',], // add const and property
+        'elements' => ['const', 'method', 'property'], // add const and property
     ],
     'class_definition' => true,
     'concat_space' => [
@@ -35,7 +35,7 @@ return [
     'function_typehint_space' => true,
     'heredoc_to_nowdoc' => true,
     'include' => true,
-    'increment_style' => ['style' => 'post',],
+    'increment_style' => ['style' => 'post'],
     'indentation_type' => true,
     'linebreak_after_opening_tag' => true,
     'line_ending' => true,
@@ -87,7 +87,7 @@ return [
     'normalize_index_brace' => true,
     'not_operator_with_successor_space' => true,
     'object_operator_without_whitespace' => true,
-    'ordered_imports' => ['sortAlgorithm' => 'alpha',],
+    'ordered_imports' => ['sortAlgorithm' => 'alpha'],
     'phpdoc_indent' => true,
     'phpdoc_inline_tag' => true,
     'phpdoc_no_access' => true,
@@ -110,7 +110,7 @@ return [
     'single_import_per_statement' => true,
     'single_line_after_imports' => true,
     'single_line_comment_style' => [
-        'comment_types' => ['hash',],
+        'comment_types' => ['hash'],
     ],
     'single_quote' => true,
     'space_after_semicolon' => true,
@@ -122,18 +122,18 @@ return [
     'trim_array_spaces' => true,
     'unary_operator_spaces' => true,
     'visibility_required' => [
-        'elements' => ['const', 'method', 'property',], // add const
+        'elements' => ['const', 'method', 'property'], // add const
     ],
     'whitespace_after_comma_in_array' => true,
     // the following additions are made to gain more performance
     'native_function_invocation' => [
         'exclude' => [],
-        'include' => ['@internal', '@all',],
+        'include' => ['@internal', '@all'],
         'scope' => 'all',
         'strict' => false,
     ],
     'native_constant_invocation' => [
-        'exclude' => ['null', 'false', 'true',],
+        'exclude' => ['null', 'false', 'true'],
         'include' => [],
         'fix_built_in' => true,
         'scope' => 'all',

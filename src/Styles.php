@@ -2,6 +2,7 @@
 
 namespace Schwarzer\PhpCs;
 
+use function array_merge;
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
@@ -11,7 +12,7 @@ class Styles
     {
         $rules = array_merge(require __DIR__ . '/../rules.php', $rules);
 
-        return Config::create()
+        return (new Config)
             ->setFinder($finder)
             ->setRules($rules)
             ->setRiskyAllowed(true)
@@ -23,4 +24,3 @@ class Styles
         return (new self())($finder, $rules);
     }
 }
-

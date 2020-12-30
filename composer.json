@@ -4,11 +4,16 @@
   "license": "proprietary",
   "config": {
     "platform": {
-      "php": "7.4"
+      "php": "8.0"
     }
   },
   "require": {
-    "friendsofphp/php-cs-fixer": "^2.0"
+    "php": "^8.0",
+    "friendsofphp/php-cs-fixer": "^2.17"
+  }
+  ,
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
   },
   "autoload": {
     "psr-4": {
