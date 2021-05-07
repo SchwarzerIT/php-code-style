@@ -1,7 +1,7 @@
 {
   "name": "schwarzer/php-code-style",
   "description": "Schwarzer IT's shared PHP style rules for PHP-CS-Fixer",
-  "license": "proprietary",
+  "license": "MIT",
   "config": {
     "platform": {
       "php": "8.0"

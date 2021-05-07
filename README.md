@@ -8,11 +8,11 @@ Require this package.
 
 Create a PHP-CS-Fixer dist file.
 
-`touch .php_cs.dist`
+`touch .php-cs-fixer.dist.php`
 
 ## Minimum Setup
 
-Add this to your `.php_cs.dist` file.
+Add this to your `.php-cs-fixer.dist.php` file.
 
 ```php
 <?php
@@ -20,12 +20,16 @@ Add this to your `.php_cs.dist` file.
 $classLoader = require __DIR__ . '/vendor/autoload.php';
 $classLoader->register(true);
 
+$rules = [
+    // 'use-this-to-override' => 'the-default-rules',
+];
+
 $finder = PhpCsFixer\Finder::create()
     ->in([
         __DIR__.'/your/source/code',
     ]);
 
-return (new Schwarzer\PhpCs\Styles)($finder);
+return (new Schwarzer\PhpCs\Styles)($finder, $rules);
 ```
 
 ## Our Laravel Setup
@@ -36,6 +40,9 @@ return (new Schwarzer\PhpCs\Styles)($finder);
 $classLoader = require __DIR__ . '/vendor/autoload.php';
 $classLoader->register(true);
 
+$rules = [
+    // 'use-this-to-override' => 'the-default-rules',
+];
 
 $finder = PhpCsFixer\Finder::create()
     ->notPath('bootstrap')
@@ -49,7 +56,7 @@ $finder = PhpCsFixer\Finder::create()
     ->ignoreDotFiles(true)
     ->ignoreVCS(true);
 
-return (new Schwarzer\PhpCs\Styles)($finder);
+return (new Schwarzer\PhpCs\Styles)($finder, $rules);
 ```
 
 # Ready
