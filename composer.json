@@ -2,11 +2,6 @@
   "name": "schwarzer/php-code-style",
   "description": "Schwarzer IT's shared PHP style rules for PHP-CS-Fixer",
   "license": "MIT",
-  "config": {
-    "platform": {
-      "php": "^7.4|^8.0"
-    }
-  },
   "require": {
     "php": "^7.4|^8.0",
     "friendsofphp/php-cs-fixer": "^3.0"
