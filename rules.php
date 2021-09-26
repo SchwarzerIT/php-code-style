@@ -19,8 +19,13 @@ return [
     ],
     'braces' => true,
     'cast_spaces' => true,
-    'class_attributes_separation' => [
-        'elements' => ['const', 'method', 'property'], // add const and property
+    'class_attributes_separation' => [ // add const, property and trait_import
+        'elements' => [
+            'const' => 'one',
+            'method' => 'one',
+            'property' => 'one',
+            'trait_import' => 'one',
+        ],
     ],
     'class_definition' => true,
     'concat_space' => [
@@ -40,7 +45,9 @@ return [
     'linebreak_after_opening_tag' => true,
     'line_ending' => true,
     'lowercase_cast' => true,
-    'lowercase_constants' => true,
+    'constant_case' => [ // adjustment for 'lowercase_constants' rule for php cs fixer v3
+        'case' => 'lower',
+    ],
     'lowercase_keywords' => true,
     'lowercase_static_reference' => true, // added from Symfony
     'magic_method_casing' => true, // added from Symfony
@@ -87,9 +94,11 @@ return [
     'normalize_index_brace' => true,
     'not_operator_with_successor_space' => true,
     'object_operator_without_whitespace' => true,
-    'ordered_imports' => ['sortAlgorithm' => 'alpha'],
+    'ordered_imports' => ['sort_algorithm' => 'alpha'], // sortAlgorithm to sort_algorithm
     'phpdoc_indent' => true,
-    'phpdoc_inline_tag' => true,
+    'phpdoc_tag_type' => true, // adjustment for 'phpdoc_inline_tag' rule for php cs fixer v3
+    'phpdoc_inline_tag_normalizer' => true, // adjustment for 'phpdoc_inline_tag' rule for php cs fixer v3
+    'general_phpdoc_tag_rename' => true, // adjustment for 'phpdoc_inline_tag' rule for php cs fixer v3
     'phpdoc_no_access' => true,
     'phpdoc_no_package' => true,
     'phpdoc_no_useless_inheritdoc' => true,
@@ -100,7 +109,7 @@ return [
     'phpdoc_trim' => true,
     'phpdoc_types' => true,
     'phpdoc_var_without_name' => true,
-    'psr4' => true,
+    'psr_autoloading' => true, // adjusted from 'psr4' rule for php cs fixer v3
     'self_accessor' => true,
     'short_scalar_cast' => true,
     'simplified_null_return' => true,
@@ -118,7 +127,14 @@ return [
     'switch_case_semicolon_to_colon' => true,
     'switch_case_space' => true,
     'ternary_operator_spaces' => true,
-    'trailing_comma_in_multiline_array' => true,
+    'trailing_comma_in_multiline' => [ // adjusted for php cs fixer v3
+        'after_heredoc' => true,
+        'elements' => [
+            'arrays',
+            'arguments',
+            'parameters',
+        ],
+    ],
     'trim_array_spaces' => true,
     'unary_operator_spaces' => true,
     'visibility_required' => [
@@ -145,10 +161,10 @@ return [
         'import_functions' => true,
     ],
     'mb_str_functions' => true, // utf-8 safe
-    'is_null' => [ // added to get strict compare instead of is_null
-        'use_yoda_style' => true,
+    'is_null' => true, // added to get strict compare instead of is_null
+    'yoda_style' => [ // personal taste
+        'always_move_variable' => true,
     ],
-    'yoda_style' => true, // personal taste
     'no_unused_imports' => true, // personal taste
     'array_indentation' => true, // personal taste
 ];
