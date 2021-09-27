@@ -132,7 +132,7 @@ return [
         'elements' => [
             'arrays',
             'arguments',
-            'parameters',
+            // 'parameters',
         ],
     ],
     'trim_array_spaces' => true,
